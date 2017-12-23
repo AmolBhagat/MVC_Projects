@@ -1,0 +1,74 @@
+﻿@model Generate_Hyperlinks.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    th,td{
+        border:1px solid black;
+    }
+</style>
+<h2> Employee Details</h2>
+
+<table style="border:1px solid black">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp=>emp.ID)
+        </th>
+        <td>
+            @Html.DisplayFor(emp=>emp.ID)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp => emp.Name)
+        </th>
+        <td>
+            @Html.DisplayFor(emp => emp.Name)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp => emp.Gender)
+        </th>
+        <td>
+            @Html.DisplayFor(emp => emp.Gender)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp => emp.AnuualSalary)
+        </th>
+        <td>
+            @Html.DisplayFor(emp => emp.AnuualSalary)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp => emp.HourlyPay)
+        </th>
+        <td>
+            @Html.DisplayFor(emp => emp.HourlyPay)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp => emp.HoursWorked)
+        </th>
+        <td>
+            @Html.DisplayFor(emp => emp.HoursWorked)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(emp => emp.Discriminator)
+        </th>
+        <td>
+            @Html.DisplayFor(emp => emp.Discriminator)
+        </td>
+    </tr>
+</table>
+<p>
+    @Html.ActionLink("Back To List", "Index")
+</p>
