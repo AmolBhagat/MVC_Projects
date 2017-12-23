@@ -1,0 +1,42 @@
+﻿@model MvcCrud1.Models.Contact
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+    <h3>Are you sure you want to delete this?</h3>
+ <div>
+     <h4>Contact</h4>
+     <hr />
+    <dl>
+        <dt>ContactName</dt>
+        <dd>@Html.DisplayFor(x=>x.ContactName)</dd>
+
+        <dt>PhoneNumber1</dt>
+        <dd>@Html.DisplayFor(x => x.PhoneNumber1)</dd>
+
+        <dt>PhoneNumber2</dt>
+        <dd>@Html.DisplayFor(x => x.PhoneNumber2)</dd>
+
+        <dt>Address1</dt>
+        <dd>@Html.DisplayFor(x => x.Address1)</dd>
+
+        <dt>Address2</dt>
+        <dd>@Html.DisplayFor(x => x.Address2)</dd>
+
+        <dt>Birthdate</dt>
+        <dd>@Html.DisplayFor(x => x.Birthdate)</dd>
+
+        <dt>EmailID</dt>
+        <dd>@Html.DisplayFor(x => x.EmailID)</dd>
+
+        <dt>Active(Y/N)</dt>
+        <dd>@Html.DisplayFor(x => x.Active_Y_N_)</dd>
+    </dl>
+     @using (Html.BeginForm())
+     {
+        <input type="submit" value="Delete" />
+        @Html.ActionLink("Back to List", "Index")
+     }
+        
+ </div>

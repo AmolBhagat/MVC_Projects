@@ -1,0 +1,83 @@
+﻿@model MvcCrud1.Models.Contact
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birthdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active_Y_N_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active_Y_N_)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContactID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+

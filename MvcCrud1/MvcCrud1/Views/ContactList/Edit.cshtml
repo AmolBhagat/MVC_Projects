@@ -1,0 +1,72 @@
+﻿@model MvcCrud1.Models.Contact
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<link href="~/content/site.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    <div>
+        <h4>Contact</h4>
+        <hr/>
+        @Html.HiddenFor(model => model.ContactID)
+        <div>
+            @Html.LabelFor(model => model.ContactName)
+            @Html.EditorFor(model => model.ContactName)
+            @Html.ValidationMessageFor(model=>model.ContactName,"")
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.PhoneNumber1)
+            @Html.EditorFor(model => model.PhoneNumber1)
+            @Html.ValidationMessageFor(m => m.PhoneNumber1, "")
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.PhoneNumber2)
+            @Html.EditorFor(model => model.PhoneNumber2)
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.Address1)
+            @Html.EditorFor(model => model.Address1)
+            @Html.ValidationMessageFor(m => m.Address1, "")
+            
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.Address2)
+            @Html.EditorFor(model => model.Address2)
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.Birthdate)
+            @Html.EditorFor(model => model.Birthdate)
+            @Html.ValidationMessageFor(m => m.Birthdate, "")
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.EmailID)
+            @Html.EditorFor(model => model.EmailID)
+            @Html.ValidationMessageFor(m => m.EmailID, "")
+        </div>
+            <br />
+        <div>
+            @Html.LabelFor(model => model.Active_Y_N_)
+            @Html.EditorFor(model => model.Active_Y_N_)
+        </div>    
+        
+        <div>
+            <input type="submit" value="Save" />
+            @Html.ActionLink("Back to List", "Index")
+        </div>      
+        
+   </div>
+}
+<div>     
+    
+</div>
+
+
+

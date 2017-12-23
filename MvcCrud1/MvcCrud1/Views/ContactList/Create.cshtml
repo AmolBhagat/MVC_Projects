@@ -1,0 +1,59 @@
+﻿@model MvcCrud1.Models.Contact
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<link href="~/content/site.css" rel="stylesheet" />
+
+@using (Html.BeginForm())
+{
+   @Html.ValidationSummary()
+    <table>
+          
+        <tr>
+            <td><p>ContactName </p></td>
+            <td><p>@Html.TextBoxFor(m => m.ContactName)</p></td>
+            <td>@Html.ValidationMessageFor(m => m.ContactName, "")</td>
+        </tr>
+        
+        <tr>
+            <td><p>PhoneNumber1 </p></td> 
+            <td><p>@Html.TextBoxFor(m => m.PhoneNumber1)</p></td>
+            <td>@Html.ValidationMessageFor(m => m.PhoneNumber1, "", new { @class = "error" })</td>
+        </tr>
+        <tr>
+            <td><p>PhoneNumber2 </p></td>
+            <td><p>@Html.TextBoxFor(m => m.PhoneNumber2)</p></td>
+        </tr>
+        <tr>
+            <td><p>Address1 </p></td>
+            <td><p>@Html.TextBoxFor(m => m.Address1)</p></td>
+            <td>@Html.ValidationMessageFor(m => m.Address1, "", new { @class = "error" })</td>
+        </tr>
+        <tr>
+            <td><p>Address2 </p></td>
+            <td><p>@Html.TextBoxFor(m => m.Address2)</p></td>
+        </tr>
+        <tr>
+            <td><p>Birthdate </p></td>
+            <td><p>@Html.TextBoxFor(m => m.Birthdate)</p></td>
+            <td>@Html.ValidationMessageFor(m => m.Birthdate, "", new { @class = "error" })</td>
+        </tr>
+        <tr>
+            <td><p>EmailID </p></td>
+            <td><p>@Html.TextBoxFor(m => m.EmailID)</p></td>
+            <td>@Html.ValidationMessageFor(m => m.EmailID, "", new { @class = "error" })</td>
+        </tr>
+        <tr>
+            <td><p>Active(Y/N) </p></td>
+            <td><p>@Html.TextBoxFor(m => m.Active_Y_N_)</p></td>
+        </tr>
+    </table>
+
+    <input type="Submit" value="Save" />
+    @Html.ActionLink("Back To List","Index")
+
+    <script src="~/scripts/jquery.validate.js"></script>
+
+}
