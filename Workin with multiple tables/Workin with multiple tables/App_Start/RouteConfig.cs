@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Generate_Hyperlinks
+namespace Workin_with_multiple_tables
 {
     public class RouteConfig
     {
@@ -16,7 +16,7 @@ namespace Generate_Hyperlinks
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Employee", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

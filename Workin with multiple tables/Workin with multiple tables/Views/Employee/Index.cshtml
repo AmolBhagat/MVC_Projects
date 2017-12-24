@@ -1,0 +1,19 @@
+﻿@using Workin_with_multiple_tables.Models
+@model IEnumerable<tblEmployee>
+@{
+    ViewBag.Title = "Employee List";
+}
+
+<div style="font-family:Arial">
+    <h2>Employee List</h2>
+    <ul>
+        @foreach(tblEmployee employee in Model)
+        {
+            <li>
+                @Html.ActionLink(employee.Name, "Details", new { id=employee.Employeeid})
+            </li>
+        }
+    </ul>
+    @Html.ActionLink("Back To Department List","Index","Department")
+</div>
+
