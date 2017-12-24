@@ -1,0 +1,17 @@
+﻿@using MVCDemo.Models
+@model Product
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+<h2>Add product for Category : @ViewBag.categoryname</h2>
+@using (Html.BeginForm())
+{
+
+    <p>ID : @Html.TextBoxFor(m => m.ProductID)</p>
+    <p>Name : @Html.TextBoxFor(m => m.ProductName)</p>
+    <p>Price: @Html.TextBoxFor(m => m.UnitPrice)</p>
+
+    <input type="submit" value="Save" />
+}
+
