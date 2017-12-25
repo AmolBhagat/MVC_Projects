@@ -1,0 +1,43 @@
+﻿@using ViewBag_ViewData_Tempdata_Demo.Models
+@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="container" style="width:40%;margin:20px auto ">
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        @foreach(var item in ViewData["EmployeeList"] as List<ViewBag_ViewData_Tempdata_Demo.Models.Employee>)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.Department</td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="container" style="width:40%;margin:20px auto">
+    <ul class="list-group">
+        <li class="list-group-item">
+            ViewBag Value is <b>@ViewBag.EmployeeNameVB</b>
+        </li>
+        <li class="list-group-item">
+            ViewData Value is <b>@ViewData["EmployeeNameVD"]</b>
+        </li>
+        <li class="list-group-item">
+            TempData Value is <b>@TempData["EmployeeNameTD"]</b>
+        </li>
+        <li class="list-group-item">
+            <a href="/Home/SecondPage">Go to second page</a>
+        </li>
+    </ul>
+</div>
+
+
+

@@ -16,5 +16,12 @@ namespace Using_Business_Objects_as_model.Controllers
             List<Employee> employees = employeeBusinessLayer.employees.ToList();
             return View(employees);
         }
+        
+        //[HttpPost]
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+
     }
 }
