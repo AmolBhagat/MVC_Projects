@@ -1,0 +1,46 @@
+﻿@using Data_transfer_objects_as_model.Models
+@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    @Html.ActionLink("Employees By Department", "EmployeesByDepartment")
+    <h2>Department List</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>DapartmentName</th>
+        </tr>
+        @foreach (var item in ViewBag.DepartmentList)
+        {
+            <tr>
+                <td>@item.DepartmentId</td>
+                <td>@item.DepartmentName</td>
+            </tr>
+        }
+    </table>
+</div>
+&ensp;
+
+<div class="container">
+    <h2>Employee List</h2>
+    <table  class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DepartmentId</th>
+            <th>Address</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Employeeid</td>
+                <td>@item.Name</td>
+                <td>@item.DepartmentId</td>
+                <td>@item.Address</td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Data_transfer_objects_as_model.Models.DepartmentsTotal>
+
+@{
+    ViewBag.Title = "EmployeesByDepartment";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="container" style="width:auto">
+    <h2>EmployeesByDepartment</h2>
+
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Total
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Total
+                </td>
+
+            </tr>
+        }
+    </table>
+
+    @Html.ActionLink("Back To List", "Index")
+</div>
