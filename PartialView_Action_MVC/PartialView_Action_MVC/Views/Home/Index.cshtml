@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PartialView_Action_MVC.Customer>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        table th {
+            background-color: #B8DBFD;
+            color: #333;
+            font-weight: bold;
+        }
+
+        table th, table td {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        table, table table td {
+            border: 0px solid #ccc;
+        }
+        table td {
+            vertical-align:top;
+        }
+    </style>
+</head>
+<body>
+    <h4>Customers</h4>
+    <hr />
+    <table cellpadding="0" cellspacing="0" id="CustomerGrid">
+        <tr>
+            <th>CustomerID</th>
+            <th>Contact Name</th>
+            <th>Address</th>
+        </tr>
+        @foreach (Customer customer in Model)
+        {
+            <tr>
+                <td>@customer.CustomerID</td>
+                <td>@customer.ContactName</td>
+                <td>@Html.Action("Details", new { CustomerId = customer.CustomerID })</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
