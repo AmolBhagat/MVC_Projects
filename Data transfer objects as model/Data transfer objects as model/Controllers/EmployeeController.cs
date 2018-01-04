@@ -13,7 +13,7 @@ namespace Data_transfer_objects_as_model.Controllers
         public ActionResult Index()
         {
             ViewBag.DepartmentList = dbcontext.Departments.ToList();
-
+            
             return View(dbcontext.Employees);
         }
         public ActionResult EmployeesByDepartment()

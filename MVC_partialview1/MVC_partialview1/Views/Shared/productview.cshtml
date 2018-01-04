@@ -1,0 +1,22 @@
+﻿@using MVC_partialview1.Models
+@model IEnumerable<Product>
+
+    
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>ProductName</th>
+            <th>UnitPrice</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+            </tr>
+        }
+    </table>
+
+
+

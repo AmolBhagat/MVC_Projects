@@ -1,0 +1,28 @@
+﻿@using MVC_partialview1.Models
+@model SupplierProductViewModel
+@{
+    ViewBag.Title = "Suppliers";
+}
+
+<h2>Suppliers</h2>
+<div  style="height:300px;width:400px;border:1px solid black;overflow:auto;float:left">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>SupplierName</th>
+        </tr>
+
+        @foreach (var item in Model.Suppliers)
+        {
+            <tr>
+                <td>@item.SupplierID</td>
+                <td>@Html.ActionLink(item.CompanyName, "Suppliers", new { sid = item.SupplierID })</td>
+            </tr>
+        }
+    </table>
+</div>
+<div style="height:300px;width:400px;border:1px solid black;overflow:auto;margin-left:1px">
+    @Html.Partial("productview", Model.products)
+</div>
+
+

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Data_transfer_objects_as_model
+namespace MVC_partialview1
 {
     public class RouteConfig
     {
@@ -16,7 +16,7 @@ namespace Data_transfer_objects_as_model
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Employee", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Product", action = "Category", id = UrlParameter.Optional }
             );
         }
     }

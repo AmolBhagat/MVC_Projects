@@ -1,0 +1,29 @@
+﻿@using MVC_partialview1.Models
+@model CategoryProductViewModel
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category</h2>
+
+<div  style="height:300px;width:400px;border:1px solid black;overflow:auto; float:left">
+    <table border="1">
+        <tr>
+            <th>CategoryID</th><th>CategoryName</th>
+        </tr>
+
+        @foreach(var item in Model.Categories)
+        {
+            <tr>
+                <td>@item.CategoryID</td><td>@Html.ActionLink(item.CategoryName,"Category",new { cid=item.CategoryID})</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+<div style="height:300px;width:400px;border:1px solid black;overflow:auto;margin-left:1px">
+        @Html.Partial("productview",Model.products)
+</div>
