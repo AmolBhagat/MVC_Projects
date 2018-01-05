@@ -1,0 +1,24 @@
+﻿@using Razor.Models
+@model Product
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<div>
+    <label>ProductId : </label>
+    <b>@Model.ProductId</b>
+    <br />
+    <label>Name :</label>
+    <b>@Model.Name</b>
+    <br />
+    <label>Description :</label>
+    <b>@Model.Description</b>
+    <br />
+    <label>Category :</label>
+    <b>@Model.Category</b>
+    <br />
+    <label>Price :</label>
+    <b>@Model.Price</b>
+</div>
+
